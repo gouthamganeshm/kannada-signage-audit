@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method</title>
+<meta name="description" content="Each application asked the same five questions about OM No. 14013/04/2022: the circulars issued under it, the action taken to use Kannada on boards, inspection reports, corrective action where boards did not comply, and the officer responsible for monitoring.">
+<link rel="alternate" hreflang="kn" href="../about.html">
+<link rel="icon" href="../assets/seal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@500;700;800&family=Noto+Sans+Kannada:wght@400;600;700&family=Bitter:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head><body class="lang-en">
+<div class="progress" aria-hidden="true"><span></span></div>
+
+
+<header class="masthead"><div class="wrap">
+  <a class="logo" href="index.html">
+    <img src="../assets/seal.png" alt="Applicant&#x27;s seal" width="88" height="88">
+    <span><b class="kn">ಕನ್ನಡ ಫಲಕ ಪರಿಶೀಲನೆ</b><b class="en">THE KANNADA SIGNAGE AUDIT</b><small>A public index of RTI replies on Kannada in Central Government offices</small></span>
+  </a>
+  <div class="mast-side"><span class="today" data-lang="en"></span><a class="lang-switch" href="../about.html" hreflang="kn">ಕನ್ನಡ</a></div>
+</div></header>
+<nav class="navbar"><div class="wrap">
+  <a class="nav-burger" href="index.html" aria-label="Home"><i></i><i></i><i></i></a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="about.html">Method</a></div>
+  <label class="nav-search"><input type="search" placeholder="Search authority, reg. no…" aria-label="Search authority, reg. no…" data-home="index.html"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></label>
+</div></nav>
+<main class="wrap"><article class="story about"><h2 class="sec-title"><span>Method</span></h2><p>Each application asked the same five questions about OM No. 14013/04/2022: the circulars issued under it, the action taken to use Kannada on boards, inspection reports, corrective action where boards did not comply, and the officer responsible for monitoring.</p><p>Replies came through the RTI Online portal and by e-mail. What is published here is the original document as received. The only changes are that the applicant&#x27;s home address, PIN code, personal e-mail and any mobile number have been permanently removed, and the applicant&#x27;s seal has been added. A person read every page before it was published.</p><p>Officials&#x27; names, designations, office addresses and office contact details are public information under the RTI Act and are left as issued.</p><p class="back"><a href="index.html">← All replies</a></p></article></main>
+<footer class="site-footer"><div class="wrap">
+  <img src="../assets/seal.png" alt="" width="64" height="64">
+  <p>Every document here was received under the RTI Act, 2005, in reply to applications about Department of Official Language OM No. 14013/04/2022 (21.06.2022) on regional languages in public signage. The applicant&#x27;s personal details are redacted; officials&#x27; names and designations are left as issued.</p>
+</div></footer>
+<script>
+(function(){
+  var bar=document.querySelector('.progress span');
+  addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/((h.scrollHeight-h.clientHeight)||1)*100)+'%';},{passive:true});
+  var d=document.querySelector('.today');
+  if(d){try{d.textContent=new Date().toLocaleDateString(d.dataset.lang==='kn'?'kn-IN':'en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(err){}}
+  var q=document.querySelector('.nav-search input');
+  if(!q) return;
+  var params=new URLSearchParams(location.search); if(params.get('q')) q.value=params.get('q');
+  function run(){
+    var v=q.value.trim().toLowerCase(), cards=document.querySelectorAll('[data-search]');
+    if(!cards.length){ if(v) location.href=q.dataset.home+'?q='+encodeURIComponent(v); return; }
+    var shown=0;
+    cards.forEach(function(c){var ok=!v||c.dataset.search.indexOf(v)>-1;c.hidden=!ok;if(ok)shown++;});
+    document.querySelectorAll('.hide-on-search').forEach(function(s){s.hidden=!!v;});
+    var n=document.querySelector('.no-results'); if(n) n.hidden=shown>0;
+  }
+  q.addEventListener('input',function(){ if(document.querySelector('[data-search]')) run(); });
+  q.addEventListener('keydown',function(ev){ if(ev.key==='Enter') run(); });
+  if(q.value) run();
+})();
+</script>
+</body></html>
