@@ -28,9 +28,8 @@
 </div></header>
 <nav class="navbar" id="nav"><div class="wrap">
   <div class="nav-links"><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="about.html">Method</a><a class="nav-lang" href="../about.html" hreflang="kn">ಕನ್ನಡ ⇄</a></div>
-  <label class="nav-search"><input type="search" placeholder="Search authority, reg. no…" aria-label="Search authority, reg. no…" data-home="index.html"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></label>
 </div></nav>
-<div class="kinds"><div class="wrap"><span class="kinds-label">Kinds of reply</span><a class="kchip" href="index.html#k-no-records"><span class="dot v-red"></span>No records held</a><a class="kchip" href="index.html#k-not-received"><span class="dot v-red"></span>Says OM not received</a><a class="kchip" href="index.html#k-claims-no-proof"><span class="dot v-amber"></span>Claims compliance, no proof</a><a class="kchip" href="index.html#k-documents"><span class="dot v-green"></span>Documents supplied</a><a class="kchip" href="index.html#k-partial"><span class="dot v-amber"></span>Partial answer</a><a class="kchip" href="index.html#k-transfer-loop"><span class="dot v-red"></span>Transferred, never answered</a></div></div>
+<div class="kinds"><div class="wrap"><span class="kinds-label">Kinds of reply</span><a class="kchip on" href="index.html#k-all" data-f="all">All</a><a class="kchip" href="index.html#k-no-records" data-f="no-records"><span class="dot v-red"></span>No records held</a><a class="kchip" href="index.html#k-not-received" data-f="not-received"><span class="dot v-red"></span>Says OM not received</a><a class="kchip" href="index.html#k-claims-no-proof" data-f="claims-no-proof"><span class="dot v-amber"></span>Claims compliance, no proof</a><a class="kchip" href="index.html#k-documents" data-f="documents"><span class="dot v-green"></span>Documents supplied</a><a class="kchip" href="index.html#k-partial" data-f="partial"><span class="dot v-amber"></span>Partial answer</a><a class="kchip" href="index.html#k-transfer-loop" data-f="transfer-loop"><span class="dot v-red"></span>Transferred, never answered</a></div></div>
 <main class="wrap" id="main"><article class="story about">
   <p class="eyebrow">Method</p><h1>About this campaign</h1><p class="standfirst">A citizen&#x27;s audit, under the Right to Information Act, of whether Central Government offices in Karnataka use Kannada on their boards and nameplates.</p>
   <h2 class="sec-title"><span>The campaign</span></h2><p>In June 2022 the Department of Official Language, Ministry of Home Affairs, issued Office Memorandum No. 14013/04/2022. It told every ministry and department that Central Government offices in non-Hindi-speaking states were not using the regional language on public boards and nameplates as the rules require, and asked them to report how their offices were complying.</p><p>Starting in July 2026, this campaign filed RTI applications with Central Government ministries and departments, railway zones and divisions, banks, insurers, public-sector companies, tribunals and other Central offices in Karnataka, asking what they had done about that order: the circulars they issued, the action they took, the inspections they ran, the corrective steps they took, and who is responsible for monitoring it.</p><p>The replies are published here one at a time, as received, after each one has been read and checked. Each reply gets a short summary in Kannada and English and its own illustration. Documents in Hindi are shown with an English machine translation beside them. The campaign was announced on X and will close with a summary of what the replies show.</p>
@@ -70,7 +69,7 @@ Tel: 011-23438130</p><p>Joint Secretaries (Admn.) of all Ministries/Departments 
   var mb=document.querySelector('.menu-btn'); if(mb)mb.onclick=function(){
     var open=document.body.classList.toggle('nav-open'); mb.setAttribute('aria-expanded',open);
     var nv=document.querySelector('.navbar'); if(open&&innerWidth<=640)nv.style.top=document.querySelector('.masthead').getBoundingClientRect().bottom+'px';
-    if(open){var i=document.querySelector('.nav-search input'); if(i&&innerWidth>640)i.focus();} };
+  };
   document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('nav-open');});});
 
 
@@ -78,20 +77,6 @@ Tel: 011-23438130</p><p>Joint Secretaries (Admn.) of all Ministries/Departments 
   document.querySelectorAll('.nav-links a').forEach(function(l){var u=new URL(l.href);l.classList.toggle('on',!u.hash&&u.pathname.replace(/index\.html$/,'')===here);});
   var d=document.querySelector('.today');
   if(d){try{d.textContent=new Date().toLocaleDateString(d.dataset.lang==='kn'?'kn-IN':'en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(err){}}
-  var q=document.querySelector('.nav-search input');
-  if(!q) return;
-  var params=new URLSearchParams(location.search); if(params.get('q')) q.value=params.get('q');
-  function run(){
-    var v=q.value.trim().toLowerCase(), cards=document.querySelectorAll('[data-search]');
-    if(!cards.length){ if(v) location.href=q.dataset.home+'?q='+encodeURIComponent(v); return; }
-    var shown=0;
-    cards.forEach(function(c){var ok=!v||c.dataset.search.indexOf(v)>-1;c.hidden=!ok;if(ok)shown++;});
-    document.querySelectorAll('.hide-on-search').forEach(function(s){s.hidden=!!v;});
-    var n=document.querySelector('.no-results'); if(n) n.hidden=shown>0;
-  }
-  q.addEventListener('input',function(){ if(document.querySelector('[data-search]')) run(); });
-  q.addEventListener('keydown',function(ev){ if(ev.key==='Enter') run(); });
-  if(q.value) run();
 })();
 </script><script>
 (function(){

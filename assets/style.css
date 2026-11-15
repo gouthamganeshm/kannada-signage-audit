@@ -107,6 +107,7 @@ code{font:.82em ui-monospace,Consolas,monospace;letter-spacing:-.01em}
 .lang-kn .kinds-label{font-family:var(--kn-sans);text-transform:none;letter-spacing:0;font-size:13px}
 .kchip{flex:none;display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:999px;border:1px solid var(--hair);background:var(--card);font:600 13px var(--kn-sans),var(--sans);text-decoration:none;transition:.25s var(--spring)}
 .kchip:hover{transform:translateY(-1px);border-color:var(--ink)}
+.kchip.on{background:var(--turmeric);border-color:var(--turmeric);color:#0b0b0c}
 .dot{flex:none;width:9px;height:9px;border-radius:50%;background:currentColor}
 .dot.v-green{background:var(--s-good)}.dot.v-amber{background:var(--s-warn)}.dot.v-red{background:var(--s-bad)}.dot.v-grey{background:var(--s-none)}
 
