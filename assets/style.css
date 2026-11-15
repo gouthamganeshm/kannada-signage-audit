@@ -458,3 +458,11 @@ h3.mini{margin:26px 0 0;font:800 13px var(--sans);text-transform:uppercase;lette
   .cardpage{gap:22px}
   .site-footer>.wrap{grid-template-columns:1fr 1fr;gap:24px}
 }
+
+/* ---------------------------------------------------------------- document pages */
+.doc{margin-top:30px;border:0}
+.doc-bar{border-radius:14px}
+.doc-bar span:last-child{display:flex;gap:8px;flex-wrap:wrap}
+.doc-bar a{white-space:nowrap}
+.pages{display:flex;flex-direction:column;gap:16px;margin-top:14px}
+.page-row .tr-orig{max-width:720px}
