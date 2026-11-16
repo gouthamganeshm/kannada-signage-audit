@@ -27,9 +27,9 @@
   <p class="tagline">A public index of RTI replies on Kannada in Central Government offices</p>
 </div></header>
 <nav class="navbar" id="nav"><div class="wrap">
-  <div class="nav-links"><a href="../index.html">Home</a><a href="../index.html#s-science">Science &amp; Space</a><a href="../index.html#s-railways">Railways</a><a href="../index.html#s-tax">Tax &amp; Customs</a><a href="../index.html#s-ministries">Ministries &amp; Departments</a><a href="../index.html#s-telecom">Telecom</a><a href="../index.html#s-education">Education &amp; Research</a><a href="../index.html#s-psus">PSUs &amp; Corporations</a><a href="../index.html#s-courts">Tribunals</a><a href="../index.html#s-audit">Audit &amp; Accounts</a><a href="../index.html#s-banks">Banks &amp; Insurance</a><a href="../dashboard.html">Dashboard</a><a href="../about.html">Method</a><a class="nav-lang" href="../../r/SWRCW-R-X-26-00009.html" hreflang="kn">ಕನ್ನಡ ⇄</a></div>
+  <div class="nav-links"><a href="../index.html">Home</a><a href="../replies.html">All replies</a><a href="../index.html#dashboard">Dashboard</a><a href="../index.html#method">Method</a><a class="nav-lang" href="../../r/SWRCW-R-X-26-00009.html" hreflang="kn">ಕನ್ನಡ ⇄</a></div>
 </div></nav>
-<div class="kinds"><div class="wrap"><span class="kinds-label">Kinds of reply</span><a class="kchip on" href="../index.html#k-all" data-f="all">All</a><a class="kchip" href="../index.html#k-no-records" data-f="no-records"><span class="dot v-red"></span>No records held</a><a class="kchip" href="../index.html#k-not-received" data-f="not-received"><span class="dot v-red"></span>Says OM not received</a><a class="kchip" href="../index.html#k-claims-no-proof" data-f="claims-no-proof"><span class="dot v-amber"></span>Claims compliance, no proof</a><a class="kchip" href="../index.html#k-documents" data-f="documents"><span class="dot v-green"></span>Documents supplied</a><a class="kchip" href="../index.html#k-partial" data-f="partial"><span class="dot v-amber"></span>Partial answer</a><a class="kchip" href="../index.html#k-transfer-loop" data-f="transfer-loop"><span class="dot v-red"></span>Transferred, never answered</a></div></div>
+<div class="kinds"><div class="wrap"><span class="kinds-label">Kinds of reply</span><a class="kchip on" href="../replies.html" data-f="all">All</a><a class="kchip" href="../replies.html#k-no-records" data-f="no-records"><span class="dot v-red"></span>No records held</a><a class="kchip" href="../replies.html#k-not-received" data-f="not-received"><span class="dot v-red"></span>Says OM not received</a><a class="kchip" href="../replies.html#k-claims-no-proof" data-f="claims-no-proof"><span class="dot v-amber"></span>Claims compliance, no proof</a><a class="kchip" href="../replies.html#k-documents" data-f="documents"><span class="dot v-green"></span>Documents supplied</a><a class="kchip" href="../replies.html#k-partial" data-f="partial"><span class="dot v-amber"></span>Partial answer</a><a class="kchip" href="../replies.html#k-transfer-loop" data-f="transfer-loop"><span class="dot v-red"></span>Transferred, never answered</a></div></div>
 <main class="wrap" id="main"><div class="story-wrap"><article class="story">
   <div class="crumbs"><a href="../index.html">Home</a> / Railways<span class="readtime">2 min read</span></div>
   <span class="chip v-green">Documents supplied</span>
@@ -226,7 +226,7 @@
 </svg></span><span><b>Mysuru Central Workshop says it received no circular but “strictly” follows a trilingual policy; it mentions inspections but sends no report</b><small>28 Sep 2026</small></span></a></aside></div></main>
 <footer class="site-footer"><div class="wrap">
   <div class="f-brand"><svg class="mark f-mark" width="56" height="56" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="5" width="56" height="40" rx="11" fill="var(--turmeric,#c6f432)"/><path d="M19 45v14M45 45v14" stroke="var(--turmeric,#c6f432)" stroke-width="5" stroke-linecap="round"/><text x="32" y="35" text-anchor="middle" font-family="Noto Sans Kannada,sans-serif" font-weight="700" font-size="27" fill="#0b0b0c">ಕ</text></svg><p>Every document here was received under the RTI Act, 2005, in reply to applications about Department of Official Language OM No. 14013/04/2022 (21.06.2022) on regional languages in public signage. The applicant&#x27;s personal details are redacted; officials&#x27; names and designations are left as issued.</p></div>
-  <div class="f-col"><h4>Read</h4><a href="../index.html">Home</a><a href="../dashboard.html">Dashboard</a><a href="../about.html">Method</a></div>
+  <div class="f-col"><h4>Read</h4><a href="../index.html">Home</a><a href="../replies.html">All replies</a><a href="../index.html#dashboard">Dashboard</a><a href="../index.html#method">Method</a></div>
   <div class="f-col"><h4>Language</h4><a href="../../r/SWRCW-R-X-26-00009.html">ಕನ್ನಡ</a><a href="../index.html">English</a></div>
   <div class="f-col"><h4>This site</h4><a href="https://x.com/gouthamganeshmh/status/2089773964843426064" rel="noopener">Campaign on X ↗</a><span>OM 14013/04/2022</span></div>
 </div><div class="f-bottom"><div class="wrap">Every document was obtained under the RTI Act, 2005.</div></div></footer>
@@ -248,6 +248,8 @@
 
   var here=location.pathname.replace(/index\.html$/,'');
   document.querySelectorAll('.nav-links a').forEach(function(l){var u=new URL(l.href);l.classList.toggle('on',!u.hash&&u.pathname.replace(/index\.html$/,'')===here);});
+  function toHash(){var id=decodeURIComponent(location.hash.slice(1));var el=id&&document.getElementById(id);if(el)el.scrollIntoView();}
+  addEventListener('load',function(){toHash();if(document.fonts)document.fonts.ready.then(toHash);});  // re-land on #dashboard / #method once fonts and art have settled
   var d=document.querySelector('.today');
   if(d){try{d.textContent=new Date().toLocaleDateString(d.dataset.lang==='kn'?'kn-IN':'en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});}catch(err){}}
 })();

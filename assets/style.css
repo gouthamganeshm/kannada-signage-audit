@@ -478,3 +478,35 @@ h3.mini{margin:26px 0 0;font:800 13px var(--sans);text-transform:uppercase;lette
 /* about: english OM pages */
 .om-en{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:14px}
 @media (max-width:700px){.om-en{grid-template-columns:1fr}.inst td.reg{white-space:normal}}
+
+/* front page: dashboard + method inline */
+.home-dash .charts{margin-top:8px}
+.see-all{margin:22px 0 0;text-align:center}
+.home-method{margin-top:56px}
+.home-method .method-h{margin:6px 0 12px;font:800 clamp(26px,3.6vw,38px)/1.2 var(--head)}
+.lang-kn .home-method .method-h{font-family:var(--kn-head);line-height:1.4}
+/* all replies: filters */
+.rep-head{margin-top:30px}
+.filters{margin:22px 0 26px;padding:16px 18px;background:var(--card);border:1px solid var(--hair);border-radius:var(--radius);display:grid;gap:12px}
+.f-row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:start}
+.f-label{padding-top:7px;font:700 12px var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.lang-kn .f-label{font-family:var(--kn-sans);text-transform:none;letter-spacing:0;font-size:13.5px}
+.f-chips{display:flex;flex-wrap:wrap;gap:8px}
+.fchip{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;border:1px solid var(--hair);background:transparent;color:inherit;font:600 13px var(--kn-sans),var(--sans);cursor:pointer;transition:.2s var(--spring)}
+.fchip small{font:600 11.5px var(--sans);color:var(--muted)}
+.fchip:hover{border-color:var(--ink)}
+.fchip.on{background:var(--turmeric);border-color:var(--turmeric);color:#0b0b0c}
+.fchip.on small{color:#0b0b0c;opacity:.7}
+.f-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;border-top:1px solid var(--rule)}
+.f-count{font:600 13px var(--sans);color:var(--muted)}
+.f-reset{border:0;background:none;color:var(--link);font:700 13px var(--kn-sans),var(--sans);cursor:pointer;padding:4px 0}
+@media (max-width:640px){
+  .filters{padding:14px}
+  .f-row{grid-template-columns:1fr;gap:6px}
+  .f-label{padding-top:0}
+  .f-chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -14px;padding:0 14px 2px}
+  .f-chips::-webkit-scrollbar{display:none}
+  .fchip{flex:none}
+  .home-method{margin-top:40px}
+}
+#dashboard,#method,#cards{scroll-margin-top:90px}
